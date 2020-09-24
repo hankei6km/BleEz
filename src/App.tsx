@@ -45,11 +45,7 @@ export default function App() {
           />
         </Box>
         <Box py={2}>
-          {errText && (
-            <div>
-              <Typography color="error">{errText}</Typography>
-            </div>
-          )}
+          <Typography color="error">{errText}</Typography>
         </Box>
       </Box>
     </div>

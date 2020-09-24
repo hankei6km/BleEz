@@ -4,8 +4,8 @@ import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 
-import Ble from "./Ble";
-import Gauge from "./Gauge";
+import Ble from "./components/Ble";
+import Gauge from "./components/Gauge";
 
 const serviceId: string = "heart_rate";
 const characteristicId: string = "heart_rate_measurement";

@@ -92,7 +92,7 @@ export default function Ble(props: blePropsType) {
   );
   return (
     <Box>
-      <Fab variant="extended" onClick={handleClick}>
+      <Fab variant="extended" color="primary" onClick={handleClick}>
         CONNECT
       </Fab>
     </Box>

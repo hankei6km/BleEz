@@ -7,6 +7,8 @@ import Ble from "./components/Ble";
 import Gauge from "./components/Gauge";
 import Value from "./components/Value";
 
+// const namePrefix: string = "BBC micro:bit";
+const namePrefix: string = "";
 const serviceId: string = "heart_rate";
 const characteristicId: string = "heart_rate_measurement";
 const decoder: (dataValue: DataView) => number = (dataValue) =>
@@ -36,6 +38,7 @@ export default function App() {
         </Box>
         <Box>
           <Ble
+            namePrefix={namePrefix}
             serviceId={serviceId}
             characteristicId={characteristicId}
             onConnected={() => setIsConnected(true)}

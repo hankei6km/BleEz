@@ -8,6 +8,7 @@ import Fab from "@material-ui/core/Fab";
 let mobileNavigatorObject: any = window.navigator;
 
 type blePropsType = {
+  namePrefix: string;
   serviceId: string;
   characteristicId: string;
   onConnected: () => void;
@@ -58,9 +59,13 @@ export default function Ble(props: blePropsType) {
       const selectedDevice = await mobileNavigatorObject.bluetooth
         .requestDevice({
           filters: [
-            {
-              services: [props.serviceId]
-            }
+            props.namePrefix !== ""
+              ? {
+                  namePrefix: props.namePrefix
+                }
+              : {
+                  services: [props.serviceId]
+                }
           ],
           optionalServices: [props.serviceId]
         })
